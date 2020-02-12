@@ -14,7 +14,7 @@ request = requests.get("https://www.fifa.com/worldcup/players/_libraries/byposit
 soup = BeautifulSoup(request.content, "html.parser")
 
 # 'for' iteration to find all IDs
-for IDs in range(0, 5):
+for IDs in range(0, 736):
     all = soup.find_all("a", "fi-p--link")[IDs]
     Player_ID.append(all['data-player-id'])
 
