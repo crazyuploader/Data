@@ -3,7 +3,13 @@ language: python
 python: "3.7"
 install:
   - pip install --upgrade pip
-  - pip install bs4 requests pandas
-script:
-  - echo "$(python --version)"
-  - cd FIFA && ./script.sh
+  - pip install bs4 requests pandas pyflakes flake8
+jobs:
+  include:
+    - stage: Test Code
+      script:
+      - cd FIFA && curl -s https://raw.githubusercontent.com/crazyuploader/Python/master/check.sh | bash -
+    - stage: Run Code
+      script:
+      - echo "$(python --version)"
+      - cd FIFA && ./script.sh
