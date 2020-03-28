@@ -1,3 +1,3 @@
 [submodule "IMDB"]
 	path = IMDB
-	url = git@github.com:crazyuploader/IMDB_TOP_50.git
+	url = https://github.com/crazyuploader/IMDB_TOP_50.git
