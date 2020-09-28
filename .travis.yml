@@ -8,8 +8,8 @@ jobs:
   include:
     - stage: Test Code
       script:
-      - cd FIFA && curl -s https://raw.githubusercontent.com/crazyuploader/Python/master/check.sh | bash -
+        - cd FIFA && curl -s https://raw.githubusercontent.com/crazyuploader/Python/master/check.sh | bash -
     - stage: Run Code
       script:
-      - echo "$(python --version)"
-      - cd FIFA && ./script.sh
+        - echo "$(python --version)"
+        - cd FIFA && ./script.sh
